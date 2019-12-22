@@ -129,7 +129,7 @@ int main (int argc, char **agrv)
 	window = SDL_CreateWindow ("snake",
 			SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
 			windowsize.x, windowsize.y,
-			SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);	
+			SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
 	renderer = SDL_CreateRenderer (window, -1, SDL_RENDERER_ACCELERATED);
 	windowtexture = SDL_CreateTexture (renderer, SDL_PIXELFORMAT_RGB888, SDL_TEXTUREACCESS_TARGET, windowsize.x, windowsize.y);
 
@@ -148,7 +148,7 @@ int main (int argc, char **agrv)
 		color_grid_box (renderer, windowsize, gridsize, playerpoint, playercolor);
 
 		for (int l = 0; l < playerlength; ++l)
-			//color_grid_box (renderer, windowsize, gridsize, playertail[l], playercolor);
+			color_grid_box (renderer, windowsize, gridsize, playertail[l], playercolor);
 
 		sprintf (windowtitle, "snake : %d", playerlength+1);
 		SDL_SetWindowTitle (window, windowtitle);
